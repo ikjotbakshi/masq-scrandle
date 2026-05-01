@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload - Scrandle</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="home-link" href="/">upload</a>
+      <a class="brand" href="/scrandle.html">scrandle</a>
+    </header>
+    <main class="upload-page">
+      <section class="upload-card" aria-labelledby="upload-title">
+        <h1 id="upload-title">upload an image.</h1>
+        <p class="hint">randomize pictures.</p>
+        <form id="upload-form" class="upload-form">
+          <label>
+            name of the photo
+            <input id="photo-name" name="name" type="text" maxlength="60" placeholder="where is the photo/what is it" required>
+          </label>
+          <label>
+            <span><span class="label-main">who is you</span> <span class="label-note">(rankings will coincide with the name u input just be consistent in what name you put in here)</span></span>
+            <input id="uploaded-by" name="uploadedBy" type="text" maxlength="60" placeholder="name" required>
+          </label>
+          <label>
+            <span><span class="label-main">images</span> <span class="label-note">(try not to upload more than a 12mb image ts does not work well in base64)</span></span>
+            <input id="photo-file" name="photo" type="file" accept="image/*" multiple required>
+          </label>
+          <button type="submit">Upload</button>
+          <p id="upload-status" class="status" role="status"></p>
+        </form>
+      </section>
+      <section class="cat-card">
+        <div class="cat-row">
+          <div class="cat-frame">
+            <img class="cat-pic" src="/assets/cat.png" alt="cat closeup">
+          </div>
+          <div class="cat-frame">
+            <img class="cat-pic" src="/assets/this-cuh-so-intelligent.png" alt="cat">
+          </div>
+          <div class="cat-frame">
+            <img class="cat-pic" src="/assets/hashbrown.png" alt="hashbrown cat">
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
